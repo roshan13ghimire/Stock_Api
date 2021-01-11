@@ -4,7 +4,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 app = Flask(__name__)
 
-@app.route('/api/<string:Company_Name>')
+@app.route('/<string:Company_Name>')
 
 
 
