@@ -4,7 +4,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 app = Flask(__name__)
 
-@app.route('/<string:Company_Name>')
+@app.route('/<string:Company_Name>' , methods = ["GET"])
 
 
 
@@ -55,4 +55,4 @@ def StockPrice(Company_Name):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
