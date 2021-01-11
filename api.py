@@ -1,16 +1,17 @@
-from flask import Flask , jsonify
+from flask import Flask , jsonify , request
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 app = Flask(__name__)
 
-@app.route('/<string:Company_Name>')
+@app.route('/' , methods = ["GET"])
 
 
 
 
-def StockPrice(Company_Name):
-    
+def StockPrice():
+
+    Company_Name = request.args["name"]
 
     url = 'http://www.nepalstock.com/todaysprice?stock-symbol=' + Company_Name
     response = requests.get(url)
@@ -51,6 +52,7 @@ def StockPrice(Company_Name):
       "Difference":last[:len(last)-1]}
     
     return dic
+
     
 
 
