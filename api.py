@@ -4,7 +4,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 app = Flask(__name__)
 
-@app.route('/<string:Company_Name>' , methods = ["GET"])
+@app.route('/<string:Company_Name>')
 
 
 
