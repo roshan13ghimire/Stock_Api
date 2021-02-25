@@ -1,5 +1,5 @@
 flask 
 beautifulsoup4
+requests
 pandas 
-requests 
 gunicorn
